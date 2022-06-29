@@ -5,7 +5,7 @@
   "types": "dist/src/index.d.ts",
   "license": "MIT",
   "engines": {
-    "node": ">=16.6"
+    "node": ">=16.9.0"
   },
   "scripts": {
     "dev": "nodemon",
