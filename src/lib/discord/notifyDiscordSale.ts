@@ -51,14 +51,14 @@ export default async function notifyDiscordSale(
       {
         style: 5,
         label: `View Transaction`,
-        url: `https://solscan.io/tx/${nftSale.transaction}`,
+        url: `https://explorer.solana.com/tx${nftSale.transaction}`,
         disabled: false,
         type: 2,
       },
       {
         style: 5,
         label: `View Token`,
-        url: `https://solscan.io/token/${nftSale.token}`,
+        url: `https://explorer.solana.com/address/${nftSale.token}`,
         disabled: false,
         type: 2,
       },
@@ -67,7 +67,7 @@ export default async function notifyDiscordSale(
 
   const embedMsg = new MessageEmbed({
     color: 0x0099ff,
-    title: nftData.name,
+    title: `Cow Sale! ${nftData.name}`,
     url: marketplace.itemURL(nftSale.token),
     timestamp: `${nftSale.soldAt}`,
     fields: [
