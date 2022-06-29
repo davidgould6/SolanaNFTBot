@@ -41,7 +41,7 @@ export default async function notifyDiscordSale(
     nftSale.method === SaleMethod.Bid ? " via bidding" : ""
   }`;
 
-  const description = `${method} for ${nftSale.getPriceInSOL()} S◎L on ${
+  const description = `${method} for ${nftSale.getPriceInSOL()} Sol on ${
     marketplace.name
   }`;
 
