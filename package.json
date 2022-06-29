@@ -11,7 +11,7 @@
     "dev": "nodemon",
     "ts-run": "ts-node src/server.ts",
     "build": "tsc",
-    "start": "NODE_PATH=./dist/src NODE_ENV=production node dist/src/server.js",
+    "start": "./src/server.js",
     "test": "jest --no-watchman",
     "lint-format": "prettier -c ./src/**/*.ts",
     "fix-format": "prettier -w ./src/**/*.ts",
