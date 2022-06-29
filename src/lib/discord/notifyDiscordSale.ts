@@ -45,26 +45,6 @@ export default async function notifyDiscordSale(
     marketplace.name
   }`;
 
-  const actionRowMsg = new MessageActionRow({
-    type: 1,
-    components: [
-      {
-        style: 5,
-        label: `View Transaction`,
-        url: `https://explorer.solana.com/tx${nftSale.transaction}`,
-        disabled: false,
-        type: 2,
-      },
-      {
-        style: 5,
-        label: `View Token`,
-        url: `https://explorer.solana.com/address/${nftSale.token}`,
-        disabled: false,
-        type: 2,
-      },
-    ],
-  });
-
   const embedMsg = new MessageEmbed({
     color: 0x0099ff,
     title: `Cow Sale! ${nftData.name}`,
@@ -102,7 +82,6 @@ export default async function notifyDiscordSale(
   });
 
   await channel.send({
-    components: [actionRowMsg],
     embeds: [embedMsg],
   });
   const logMsg = `Notified discord #${channel.name}: ${nftData.name} - ${description}`;
