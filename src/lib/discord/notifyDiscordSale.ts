@@ -53,7 +53,7 @@ export default async function notifyDiscordSale(
     fields: [
       {
         name: "Price",
-        value: `${nftSale.getPriceInSOL().toFixed(2)} S◎L ${
+        value: `${nftSale.getPriceInSOL().toFixed(2)} Sol ${
           nftSale.method === SaleMethod.Bid ? "(Via bidding)" : ""
         }`,
         inline: false,
